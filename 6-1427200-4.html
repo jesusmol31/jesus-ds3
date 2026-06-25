@@ -5,227 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cable UTP AMP Categoría 6 Chaqueta CMR 23AWG - 6-1427200-4</title>
     <style>
-        /* --- ESTILOS GENERALES Y RESET --- */
+        /* --- ESTILOS BASE --- */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background-color: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #0056b3;
-            color: #fff;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.5;
             padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-        }
-
-        header p {
-            font-size: 1rem;
-            opacity: 0.9;
         }
 
         .container {
             max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
 
-        /* --- CONTENEDOR PRINCIPAL DEL PRODUCTO --- */
-        .product-main {
+        /* --- CONTENEDOR PRINCIPAL (PRODUCTO) --- */
+        .product-container {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            gap: 40px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 30px;
         }
 
         @media (min-width: 768px) {
-            .product-main {
-                grid-template-columns: 1fr 1fr;
+            .product-container {
+                grid-template-columns: 45% 55%;
             }
         }
 
-        /* Sección Imagen */
-        .product-image-container {
+        /* Bloque Izquierdo: Imagen */
+        .product-image {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            background: #fff;
-            border: 1px solid #eef0f2;
-            border-radius: 8px;
+            align-items: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
             padding: 20px;
-            min-height: 300px;
+            background-color: #ffffff;
+            min-height: 350px;
         }
 
-        .product-image-container img {
+        .product-image img {
             max-width: 100%;
-            max-height: 280px;
-            height: auto;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
+            max-height: 320px;
             object-fit: contain;
         }
 
-        .product-image-container img:hover {
-            transform: scale(1.03);
-        }
-
-        /* Sección Datos de Compra */
-        .product-details {
+        /* Bloque Derecho: Detalles de Compra */
+        .product-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
-        .brand-tag {
-            color: #0056b3;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
+        .product-info h1 {
+            font-size: 24px;
+            color: #000000;
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        .product-title {
-            font-size: 2rem;
-            color: #111;
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .product-sku {
-            font-size: 1rem;
-            color: #666;
+        .sku-text {
+            font-size: 14px;
+            color: #666666;
             margin-bottom: 20px;
         }
 
-        .price-box {
-            background: #eef7ff;
-            padding: 15px 20px;
-            border-radius: 6px;
+        .price-container {
             margin-bottom: 25px;
-            border-left: 5px solid #0056b3;
         }
 
         .price-label {
-            font-size: 0.9rem;
-            color: #555;
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 4px;
         }
 
-        .price-value {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #0056b3;
-        }
-
-        .price-unit {
-            font-size: 1rem;
-            font-weight: normal;
-            color: #333;
-        }
-
-        .btn-cotizar {
-            display: inline-block;
-            background-color: #ffc107;
-            color: #000;
-            text-align: center;
-            padding: 15px 30px;
-            font-size: 1.1rem;
+        .price-amount {
+            font-size: 28px;
             font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: background 0.2s ease, transform 0.1s ease;
-        }
-
-        .btn-cotizar:hover {
-            background-color: #e0a800;
-            transform: translateY(-2px);
-        }
-
-        /* --- SECCIONES DE INFORMACIÓN REFORZADA --- */
-        .info-section {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
             color: #0056b3;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #eef0f2;
-            padding-bottom: 10px;
-            display: flex;
-            align-items: center;
+        }
+
+        .price-detail {
+            font-size: 13px;
+            color: #666666;
+        }
+
+        .btn-quote {
+            display: inline-block;
+            background-color: #f0c14b;
+            border: 1px solid #a88734;
+            color: #111111;
+            text-align: center;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: normal;
+            text-decoration: none;
+            border-radius: 3px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+        }
+
+        .btn-quote:hover {
+            background-color: #ddb347;
+            border-color: #846a29;
+            cursor: pointer;
+        }
+
+        /* --- SECCIONES DE INFORMACIÓN EN BLOQUES --- */
+        .info-section {
+            margin-bottom: 35px;
+        }
+
+        .section-heading {
+            font-size: 18px;
+            color: #000000;
+            border-bottom: 1px solid #0056b3;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
 
         .info-section p {
-            margin-bottom: 15px;
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 12px;
             text-align: justify;
         }
 
-        /* --- TABLA DE ESPECIFICACIONES TÉCNICAS RESPONSIVE --- */
-        .tech-table {
+        .info-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-section li {
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 6px;
+        }
+
+        /* --- TABLA DE ESPECIFICACIONES TÉCNICAS (ESTILO CISCO) --- */
+        .specs-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin-top: 10px;
+            border: 1px solid #e0e0e0;
         }
 
-        .tech-table th, .tech-table td {
-            padding: 12px 15px;
+        .specs-table th, .specs-table td {
+            padding: 10px 14px;
+            font-size: 14px;
             text-align: left;
-            border-bottom: 1px solid #eef0f2;
         }
 
-        .tech-table th {
-            background-color: #f8f9fa;
-            color: #333;
-            font-weight: 600;
+        /* Columnas */
+        .specs-table th {
+            background-color: #f9f9f9;
+            color: #333333;
+            font-weight: bold;
             width: 35%;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .tech-table tr:hover {
-            background-color: #fafafa;
+        .specs-table td {
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0;
         }
 
+        /* Filas alternas grises */
+        .specs-table tr:nth-child(even) td {
+            background-color: #fdfdfd;
+        }
+        .specs-table tr:nth-child(even) th {
+            background-color: #f5f5f5;
+        }
+
+        /* Vista Responsive para la Tabla */
         @media (max-width: 576px) {
-            .tech-table, .tech-table tbody, .tech-table tr, .tech-table td, .tech-table th {
+            .specs-table, .specs-table tbody, .specs-table tr, .specs-table th, .specs-table td {
                 display: block;
                 width: 100%;
             }
-            .tech-table tr {
-                margin-bottom: 15px;
-                border: 1px solid #eef0f2;
-                border-radius: 4px;
-                background: #fff;
+            .specs-table tr {
+                border-bottom: 2px solid #e0e0e0;
             }
-            .tech-table th {
-                background-color: #eef7ff;
-                color: #0056b3;
-                border-bottom: 1px solid #eef0f2;
+            .specs-table th {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                background-color: #f5f5f5 !important;
+            }
+            .specs-table td {
+                border-bottom: none;
             }
         }
 
-        /* --- SECCIÓN TAMBIÉN DISPONIBLE (CABLES ADICIONALES) --- */
+        /* --- CUADRÍCULA DE PRODUCTOS RELACIONADOS --- */
         .related-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -234,120 +219,101 @@
         }
 
         .related-card {
-            background: #fafafa;
-            border: 1px solid #eef0f2;
-            border-radius: 6px;
-            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 15px;
             text-align: center;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
 
-        .related-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transform: translateY(-3px);
-            background: #fff;
-        }
-
-        .related-card .img-wrapper {
-            height: 130px;
+        .related-card .img-container {
+            height: 140px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
+            align-items: center;
+            margin-bottom: 12px;
         }
 
         .related-card img {
             max-width: 100%;
-            max-height: 120px;
+            max-height: 130px;
             object-fit: contain;
         }
 
-        .related-card h3 {
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 10px;
-            min-height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .related-card h4 {
+            font-size: 14px;
+            color: #0056b3;
+            margin-bottom: 8px;
+            font-weight: normal;
+            line-height: 1.3;
+            min-height: 36px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .related-card .sku-sub {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 15px;
+            font-size: 12px;
+            color: #666666;
+            margin-bottom: 12px;
         }
 
-        .btn-ver {
-            display: inline-block;
-            background-color: #fff;
-            color: #0056b3;
-            border: 1px solid #0056b3;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.2s;
-            width: 100%;
-        }
-
-        .btn-ver:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
-        footer {
-            background-color: #222;
-            color: #fff;
+        .btn-view {
+            display: block;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            font-size: 0.9rem;
+            background-color: #ffffff;
+            color: #333333;
+            border: 1px solid #cccccc;
+            padding: 6px 12px;
+            font-size: 13px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .btn-view:hover {
+            background-color: #f5f5f5;
+            border-color: #b3b3b3;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>DS3 Comunicaciones</h1>
-        <p>Soluciones Integrales en Conectividad y Redes de Alta Performance</p>
-    </header>
-
     <div class="container">
         
-        <main class="product-main">
-            <div class="product-image-container">
+        <div class="product-container">
+            
+            <div class="product-image">
                 <img src="principal.jpg" alt="Cable UTP AMP Cat 6 6-1427200-4">
             </div>
             
-            <div class="product-details">
-                <span class="brand-tag">AMP Netconnect / CommScope</span>
-                <h2 class="product-title">Cable UTP AMP Categoría 6 Chaqueta CMR 23AWG</h2>
-                <p class="product-sku"><strong>Código de Producto / SKU:</strong> 6-1427200-4</p>
+            <div class="product-info">
+                <h1>Cable UTP AMP Categoría 6 Chaqueta CMR 23AWG</h1>
+                <div class="sku-text"><strong>Código de Producto / SKU:</strong> 6-1427200-4</div>
                 
-                <div class="price-box">
-                    <p class="price-label">Precio Referencial:</p>
-                    <p class="price-value">U$ 187.00 <span class="price-unit">/ por rollo</span></p>
+                <div class="price-container">
+                    <div class="price-label">Precio de Lista Referencial:</div>
+                    <div class="price-amount">U$ 187.00</div>
+                    <div class="price-detail">* Precios más impuestos correspondientes. Unidades por carrete de 305m.</div>
                 </div>
 
-                <a href="https://www.ds3comunicaciones.com/AMP/index.html#cotizar" class="btn-cotizar">Solicitar Cotización</a>
+                <a href="https://www.ds3comunicaciones.com/AMP/index.html#cotizar" class="btn-quote">Solicitar Cotización de este Producto</a>
             </div>
-        </main>
 
-        <section class="info-section">
-            <h3 class="section-title">Descripción del Producto</h3>
+        </div>
+
+        <div class="info-section">
+            <div class="section-heading">Descripción del Producto</div>
             <p>Los Cables AMP NETCONNECT Categoría 6 exceden rigurosamente los requerimientos estructurales e internacionales establecidos por las normas TIA/EIA-568-B.2-1 e ISO/IEC 11801 Clase E. Han sido diseñados para soportar con solvencia arquitecturas de misión crítica y aplicaciones de banda ancha actuales y de próxima generación.</p>
             <p>Este cable de red horizontal cuenta con conductores de cobre sólido de calibre 23 AWG y aislamiento de polietileno de alta densidad. Su presentación en caja <em>reel-in-box</em> garantiza 1000 pies (305 metros) lineales libres de empalmes y torceduras, agilizando los despliegues de cableado estructurado en data centers y oficinas corporativas.</p>
-        </section>
+        </div>
 
-        <section class="info-section">
-            <h3 class="section-title">Especificaciones Técnicas</h3>
-            <table class="tech-table">
+        <div class="info-section">
+            <div class="section-heading">Especificaciones Técnicas</div>
+            <table class="specs-table">
                 <tbody>
                     <tr>
                         <th>Marca</th>
@@ -383,7 +349,7 @@
                     </tr>
                     <tr>
                         <th>Color de Chaqueta</th>
-                        <td>Gris (Disponible también en Azul y Blanco)</td>
+                        <td>Gris</td>
                     </tr>
                     <tr>
                         <th>Presentación / Embalaje</th>
@@ -391,67 +357,63 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <section class="info-section">
-            <h3 class="section-title">Aplicaciones de Red Soportadas</h3>
+        <div class="info-section">
+            <div class="section-heading">Aplicaciones de Red Soportadas</div>
             <p>Gracias a su excelente margen de relación señal/ruido y bajo nivel de paradiafonía (NEXT), está perfectamente homologado para:</p>
             <ul>
-                <li style="margin-left: 20px; margin-bottom: 8px;">Gigabit Ethernet (1000BASE-TX y 1000BASE-T)</li>
-                <li style="margin-left: 20px; margin-bottom: 8px;">10/100BASE-TX Fast Ethernet</li>
-                <li style="margin-left: 20px; margin-bottom: 8px;">Token Ring y ATM de 155 Mbps y 1.2 Gbps</li>
-                <li style="margin-left: 20px; margin-bottom: 8px;">Voz sobre IP (VoIP) de alta fidelidad, Video ISDN, analógico y digital</li>
+                <li>Gigabit Ethernet (1000BASE-TX y 1000BASE-T)</li>
+                <li>10/100BASE-TX Fast Ethernet</li>
+                <li>Token Ring y ATM de 155 Mbps y 1.2 Gbps</li>
+                <li>Voz sobre IP (VoIP) de alta fidelidad, Video ISDN, analógico y digital</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="info-section" id="tambien-disponible">
-            <h3 class="section-title">También Disponible (Cables Cat 6 y Cat 6A)</h3>
+        <div class="info-section">
+            <div class="section-heading">También Disponible (Cables Cat 6 y Cat 6A)</div>
             <div class="related-grid">
                 
                 <div class="related-card">
-                    <div class="img-wrapper">
+                    <div class="img-container">
                         <img src="cat6-lszh.jpg" alt="Cable AMP Cat 6 LSZH">
                     </div>
-                    <h3>Cable UTP AMP Cat 6 Chaqueta LSZH</h3>
+                    <h4>Cable UTP AMP Cat 6 Chaqueta LSZH</h4>
                     <div class="sku-sub">SKU: 1859345-2</div>
-                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-ver">Ver Producto</a>
+                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-view">Ver Detalles</a>
                 </div>
 
                 <div class="related-card">
-                    <div class="img-wrapper">
+                    <div class="img-container">
                         <img src="cat6-cm.jpg" alt="Cable AMP Cat 6 CM">
                     </div>
-                    <h3>Cable UTP AMP Cat 6 Chaqueta CM 4 Pares</h3>
+                    <h4>Cable UTP AMP Cat 6 Chaqueta CM 4 Pares</h4>
                     <div class="sku-sub">SKU: 1427254-4</div>
-                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-ver">Ver Producto</a>
+                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-view">Ver Detalles</a>
                 </div>
 
                 <div class="related-card">
-                    <div class="img-wrapper">
+                    <div class="img-container">
                         <img src="cat6a-futp.jpg" alt="Cable AMP Cat 6A F/UTP">
                     </div>
-                    <h3>Cable F/UTP AMP Cat 6A Apantallado LSZH</h3>
+                    <h4>Cable F/UTP AMP Cat 6A Apantallado LSZH</h4>
                     <div class="sku-sub">SKU: 1859218-2</div>
-                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-ver">Ver Producto</a>
+                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-view">Ver Detalles</a>
                 </div>
 
                 <div class="related-card">
-                    <div class="img-wrapper">
+                    <div class="img-container">
                         <img src="cat6a-caja.jpg" alt="Cable AMP Cat 6A Caja">
                     </div>
-                    <h3>Cable UTP AMP Cat 6A Chaqueta LSZH Caja</h3>
+                    <h4>Cable UTP AMP Cat 6A Chaqueta LSZH Caja</h4>
                     <div class="sku-sub">SKU: 1859381-2</div>
-                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-ver">Ver Producto</a>
+                    <a href="https://www.ds3comunicaciones.com/AMP/index.html#cablecat6" class="btn-view">Ver Detalles</a>
                 </div>
 
             </div>
-        </section>
+        </div>
 
     </div>
-
-    <footer>
-        <p>&copy; 2026 DS3 Comunicaciones S.A.C. Todos los derechos reservados. Las marcas expuestas son propiedad de sus respectivos fabricantes.</p>
-    </footer>
 
 </body>
 </html>
